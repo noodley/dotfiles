@@ -1,7 +1,8 @@
 # dotfiles
 ## Opt-in state NixOS configuration
-### References and useful repositories:
-* https://guekka.github.io/nixos-server-1
+### Helpful reference guides and repositories:
 * https://github.com/kjhoerr/dotfiles
+* https://github.com/Misterio77/nix-config
+* https://guekka.github.io/nixos-server-1
 
 ### Todo
