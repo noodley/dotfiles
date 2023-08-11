@@ -29,6 +29,11 @@
   };
   programs.fuse.userAllowOther = true;
 
+  # This prevents users being lectured after every wipe on boot. 
+  security.sudo.extraConfig = ''
+    Defaults lecture = never
+  '';
+
   system.activationScripts.persistent-dirs.text =
     let
       mkHomePersist = user: lib.optionalString user.createHome ''
