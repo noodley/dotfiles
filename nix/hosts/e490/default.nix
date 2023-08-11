@@ -4,9 +4,9 @@
     ../common/global
     ../common/users/dougw
     ../common/optional/kbd-interception.nix
+    ../common/optional/pipewire.nix
 #    ../common/optional/wireless.nix
 #    ../common/optional/greetd.nix
-#    ../common/optional/pipewire.nix
 #    ../common/optional/quietboot.nix
 #    ../common/optional/lol-acfix.nix
   ];
