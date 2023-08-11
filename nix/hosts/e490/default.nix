@@ -19,8 +19,6 @@
 
   console.font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-128b.psf.gz";
 
-
-
   #powerManagement.powertop.enable = true;
   #programs = {
   #  light.enable = true;

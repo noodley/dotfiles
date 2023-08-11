@@ -1,5 +1,5 @@
 # This file (and the global directory) holds config that i use on all hosts
-{ inputs, outputs, ... }: {
+{ inputs, outputs, pkgs, ... }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
     #./acme.nix
@@ -32,6 +32,11 @@
   environment.profileRelativeSessionVariables = { };
 
   environment.enableAllTerminfo = true;
+
+  environment.systemPackages = with pkgs; [
+    neovim
+    git
+  ];
 
   hardware.enableRedistributableFirmware = true;
   hardware.enableAllFirmware = true;
