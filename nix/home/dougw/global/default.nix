@@ -6,27 +6,28 @@ in
 {
   imports = [
     inputs.impermanence.nixosModules.home-manager.impermanence
-    inputs.nix-colors.homeManagerModule
-    ../features/cli
-    ../features/nvim
+    #inputs.nix-colors.homeManagerModule
+    #../features/cli
+    #../features/nvim
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
-  nixpkgs = {
-    overlays = builtins.attrValues outputs.overlays;
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = (_: true);
-      permittedInsecurePackages = [ ];
-    };
-  };
+  # TODO: Only enable this on hosts where useGlobalPackages is not configured
+  #nixpkgs = {
+  #  overlays = builtins.attrValues outputs.overlays;
+  #  config = {
+  #    allowUnfree = true;
+  #    allowUnfreePredicate = (_: true);
+  #    permittedInsecurePackages = [ ];
+  #  };
+  #};
 
-  nix = {
-    package = lib.mkDefault pkgs.nix;
-    settings = {
-      experimental-features = [ "nix-command" "flakes" "repl-flake" ];
-      warn-dirty = false;
-    };
-  };
+  #nix = {
+  #  package = lib.mkDefault pkgs.nix;
+  #  settings = {
+  #    experimental-features = [ "nix-command" "flakes" "repl-flake" ];
+  #    warn-dirty = false;
+  #  };
+  #};
 
   #systemd.user.startServices = "sd-switch";
 
@@ -45,7 +46,7 @@ in
     };
     git = {
       enable = true;
-      userName = "noodley";
+      userName = "Doug Weimer";
       userEmail = "dweimer@gmail.com";
       extraConfig = {
         core = {

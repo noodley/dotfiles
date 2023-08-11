@@ -21,4 +21,6 @@
 
   # Per user persistence is handled by home-manager
   environment.persistence = { };
+
+  home-manager.users.dougw = import ../../../../home/dougw/${config.networking.hostName}.nix;
 }
