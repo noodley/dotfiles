@@ -3,7 +3,7 @@
     ./hardware-configuration.nix
     ../common/global
     ../common/users/dougw
-#    ../common/optional/gamemode.nix
+    ../common/optional/kbd-interception.nix
 #    ../common/optional/wireless.nix
 #    ../common/optional/greetd.nix
 #    ../common/optional/pipewire.nix
