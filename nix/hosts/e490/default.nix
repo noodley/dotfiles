@@ -5,6 +5,7 @@
     ../common/users/dougw
     ../common/optional/kbd-interception.nix
     ../common/optional/pipewire.nix
+    ../common/optional/polkit.nix
   ];
 
   system.stateVersion = "23.05";
