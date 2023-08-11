@@ -30,17 +30,14 @@
   #  lidSwitchExternalPower = "lock";
   #};
 
-  #xdg.portal = {
-  #  enable = true;
-  #  wlr.enable = true;
-  #};
-  #hardware = {
-  #  opengl = {
-  #    enable = true;
-  #    extraPackages = with pkgs; [ amdvlk ];
-  #    driSupport = true;
-  #    driSupport32Bit = true;
-  #  };
-  #};
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+  };
 
+  hardware = {
+    opengl = {
+      enable = true;
+    };
+  };
 }
