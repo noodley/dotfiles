@@ -1,6 +1,6 @@
 # This file contains an ephemeral btrfs root configuration
 # TODO: perhaps partition using disko in the future
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 let
   hostname = config.networking.hostName;
   wipeScript = ''
@@ -68,4 +68,10 @@ in
       neededForBoot = true;
     };
   };
+
+  # Include a script to show the changes between / and the empty
+  # snapshot
+  environment.systemPackages = with pkgs; [
+    btrfs-root-diff
+  ];
 }
