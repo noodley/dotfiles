@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   programs.bash = {
     enable = true;
@@ -9,5 +10,12 @@
     bashrcExtra = ''
       set -o vi
     '';
+  };
+  home.persistence = {
+    "/persist/root/home/${config.home.username}" = {
+      files = [
+        ".bash_history"
+      ];
+    };
   };
 }

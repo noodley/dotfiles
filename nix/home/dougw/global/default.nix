@@ -36,13 +36,9 @@
     persistence = {
       "/persist/root/home/${config.home.username}" = {
         directories = [
-	  ".ssh"
           "Documents"
           "Downloads"
         ];
-	files = [
-	  ".bash_history"
-	];
         allowOther = true;
       };
     };
