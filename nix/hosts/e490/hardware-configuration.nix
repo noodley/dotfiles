@@ -2,6 +2,7 @@
   imports = [
     ../common/optional/ephemeral-btrfs.nix
     ../common/optional/encrypted-root.nix
+    ../common/optional/systemd-boot.nix
     ../common/optional/zram-swap.nix
   ];
 
@@ -12,13 +13,6 @@
     };
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
-    loader = {
-      systemd-boot = {
-        enable = true;
-        #consoleMode = "max";
-      };
-      efi.canTouchEfiVariables = true;
-    };
   };
 
   fileSystems = {
