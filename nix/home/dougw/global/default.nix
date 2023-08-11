@@ -7,7 +7,7 @@ in
   imports = [
     inputs.impermanence.nixosModules.home-manager.impermanence
     #inputs.nix-colors.homeManagerModule
-    #../features/cli
+    ../features/cli
     #../features/nvim
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
@@ -20,7 +20,7 @@ in
   #    permittedInsecurePackages = [ ];
   #  };
   #};
-
+  #
   #nix = {
   #  package = lib.mkDefault pkgs.nix;
   #  settings = {
@@ -29,35 +29,8 @@ in
   #  };
   #};
 
-  #systemd.user.startServices = "sd-switch";
-
   programs = {
     home-manager.enable = true;
-    bash = {
-      enable = true;
-      shellAliases = {
-        vi = "nvim";
-        vim = "nvim";
-      };
-      shellOptions = [ ];
-      bashrcExtra = ''
-        set -o vi
-      '';
-    };
-    git = {
-      enable = true;
-      userName = "Doug Weimer";
-      userEmail = "dweimer@gmail.com";
-      extraConfig = {
-        core = {
-          editor = "nvim";
-        };
-      };
-    };
-    tmux = {
-      enable = true;
-      keyMode = "vi";
-    };
   };
 
   home = {

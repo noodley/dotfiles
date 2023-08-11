@@ -3,10 +3,6 @@
   imports = [
     ./global
     ./features/desktop/sway
-#    ./features/desktop/wireless
-#    ./features/productivity
-#    ./features/pass
-#    ./features/games
   ];
 
 #  wallpaper = outputs.wallpapers.aenami-lunar;
