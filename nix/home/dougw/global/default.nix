@@ -1,14 +1,8 @@
 { inputs, lib, pkgs, config, outputs, ... }:
-let
-  inherit (inputs.nix-colors) colorSchemes;
-  inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) colorschemeFromPicture nixWallpaperFromScheme;
-in
 {
   imports = [
     inputs.impermanence.nixosModules.home-manager.impermanence
-    #inputs.nix-colors.homeManagerModule
     ../features/cli
-    #../features/nvim
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   # TODO: Only enable this on hosts where useGlobalPackages is not configured
