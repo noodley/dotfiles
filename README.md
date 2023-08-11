@@ -4,5 +4,9 @@
 * https://github.com/kjhoerr/dotfiles
 * https://github.com/Misterio77/nix-config
 * https://guekka.github.io/nixos-server-1
+### Helpful commands
+```
+nixos-rebuild --flake '.#e490' build
+```
 
 ### Todo
