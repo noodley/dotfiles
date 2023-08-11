@@ -1,15 +1,6 @@
 /*
 !.gitignore
-!.config/
-/.config/*
-!.config/guix/
-/.config/guix/current
-!.config/nixos/
-!.config/nix/
-!.m2/
-/.m2/*
-!.m2/.keep
-!.github/
+!nixos/
 !flake.nix
 !flake.lock
 !README.md
