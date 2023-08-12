@@ -28,8 +28,10 @@
   environment.enableAllTerminfo = true;
 
   environment.systemPackages = with pkgs; [
-    neovim
     git
+    neovim
+    pciutils
+    psmisc
   ];
 
   hardware.enableRedistributableFirmware = true;
