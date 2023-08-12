@@ -23,4 +23,8 @@
   environment.persistence = { };
 
   home-manager.users.dougw = import ../../../../home/dougw/${config.networking.hostName}.nix;
+
+  security.pam.services = {
+    swaylock = {};
+  };
 }
