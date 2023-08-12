@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
     ../common/global
     ../common/users/dougw
+    ../common/optional/intel-graphics.nix
     ../common/optional/kbd-interception.nix
     ../common/optional/pipewire.nix
     ../common/optional/polkit.nix
