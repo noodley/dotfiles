@@ -7,6 +7,8 @@
     ../common/optional/kbd-interception.nix
     ../common/optional/pipewire.nix
     ../common/optional/polkit.nix
+    inputs.hardware.nixosModules.common-pc-ssd
+    inputs.hardware.nixosModules.common-cpu-intel
   ];
 
   system.stateVersion = "23.05";
