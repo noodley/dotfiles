@@ -17,13 +17,10 @@
 
   console.font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-128b.psf.gz";
 
-  #powerManagement.powertop.enable = true;
-  #programs = {
+  programs = {
   #  light.enable = true;
-  #  adb.enable = true;
-  #  dconf.enable = true;
-  #  kdeconnect.enable = true;
-  #};
+    dconf.enable = true;
+  };
 
   # Lid settings
   #services.logind = {
