@@ -20,7 +20,7 @@ in
         "browser.onboarding.enabled" = false;
         "browser.aboutConfig.showWarning" = false;
         "browser.sessionstore.interval" = "1800000";
-        "browser.toolbars.bookmarks.visibility" = "always";
+        "browser.toolbars.bookmarks.visibility" = "never";
         "browser.urlbar.showSearchSuggestionsFirst" = false;
         "browser.urlbar.speculativeConnect.enabled" = false;
         "browser.urlbar.dnsResolveSingleWordsAfterSearch" = 0;
@@ -29,6 +29,8 @@ in
         "browser.shell.checkDefaultBrowser" = false;
         "browser.shell.defaultBrowserCheckCount" = 1;
         "browser.startup.homepage" = "https://start.duckduckgo.com";
+	## This is no longer respected and we need a policy
+	#"browsear.search.defaultengine" = "DuckDuckGo";
         "dom.security.https_only_mode" = true;
 
         # Features
@@ -127,7 +129,8 @@ in
   home.persistence = {
     "/persist/root/home/${config.home.username}" = {
       directories = [
-        ".cache/mozilla/firefox"
+        # We'll move this to better central .cache management later.
+        # ".cache/mozilla/firefox"
         ".mozilla/firefox/${config.home.username}"
       ];
     };
