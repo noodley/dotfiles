@@ -121,21 +121,6 @@ in
     };
   };
 
-  # I'm giving up on this for now and just persisting .mozilla
-  # No persisting means that I have to manually enable exensions
-  # after each reboot, which is annoying. There are NixOS overrides
-  # for policy.json, but it's not worth my time to move to a system
-  # packacge and try setting it up.
-  home.persistence = {
-    "/persist/root/home/${config.home.username}" = {
-      directories = [
-        # We'll move this to better central .cache management later.
-        # ".cache/mozilla/firefox"
-        ".mozilla/firefox/${config.home.username}"
-      ];
-    };
-  };
-
   xdg.mimeApps.defaultApplications = {
     "text/html" = [ "firefox.desktop" ];
     "text/xml" = [ "firefox.desktop" ];

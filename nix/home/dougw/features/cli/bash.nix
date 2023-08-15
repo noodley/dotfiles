@@ -2,20 +2,16 @@
 {
   programs.bash = {
     enable = true;
-    shellAliases = {
-      vi = "nvim";
-      vim = "nvim";
-    };
+    shellAliases = { };
     shellOptions = [ ];
+    sessionVariables = { };
     bashrcExtra = ''
       set -o vi
     '';
-  };
-  home.persistence = {
-    "/persist/root/home/${config.home.username}" = {
-      files = [
-        ".bash_history"
-      ];
-    };
+    historyFile = "/persist/root/home/${config.home.username}/.bash_history";
+    historyIgnore = [
+      "ls"
+      "exit"
+    ];
   };
 }

@@ -11,4 +11,13 @@
     bottom # System viewer
     jq # JSON pretty printer and manipulator
   ];
+
+  home.shellAliases = {
+    vi = "nvim";
+    vim = "nvim";
+  };
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
 }

@@ -61,6 +61,12 @@ in
       options = [ "subvol=/persist" "compress=zstd" "noatime" ];
       neededForBoot = true;
     };
+    "/home" = {
+      device = "/dev/disk/by-label/ROOT";
+      fsType = "btrfs";
+      options = [ "subvol=/home" "compress=zstd" "noatime" ];
+      neededForBoot = true;
+    };
     "/var/log" = { 
       device = "/dev/disk/by-label/ROOT";
       fsType = "btrfs";
