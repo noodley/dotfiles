@@ -4,7 +4,7 @@
     inputs.home-manager.nixosModules.home-manager
     ./locale.nix
     ./nix.nix
-    #./openssh.nix
+    ./openssh.nix
     ./optin-persistence.nix
     #./sops.nix
     ./systemd-initrd.nix
