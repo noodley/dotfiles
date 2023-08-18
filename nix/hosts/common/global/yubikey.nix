@@ -2,9 +2,13 @@
   environment.systemPackages = with pkgs; [
     yubikey-personalization
     gnupg
+    pinentry-qt
   ];
 
-  programs.ssh.startAgent = false;
+  programs = {
+    ssh.startAgent = false;
+  };
+
   services.pcscd.enable = true;
   services.udev.packages = [ pkgs.yubikey-personalization ];
 
