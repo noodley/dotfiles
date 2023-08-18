@@ -8,6 +8,7 @@
     ./optin-persistence.nix
     #./sops.nix
     ./systemd-initrd.nix
+    ./yubikey.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   
