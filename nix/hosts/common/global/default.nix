@@ -32,6 +32,7 @@
     neovim
     pciutils
     psmisc
+    usbutils
   ];
 
   hardware.enableRedistributableFirmware = true;
