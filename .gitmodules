@@ -1,0 +1,3 @@
+[submodule "sops"]
+	path = sops
+	url = git@github.com:noodley/sysops
