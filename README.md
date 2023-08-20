@@ -9,4 +9,8 @@
 nixos-rebuild --flake '.#e490' build
 ```
 
+### Config Layout
+* Based on snowfwall-lib: https://github.com/snowfallorg/lib
+* Each host is defined nix/systems/<architecture>/<hostname>
+* 
 ### Todo
