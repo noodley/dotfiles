@@ -22,7 +22,7 @@ in
       programs.git = {
         enable = true;
         inherit (cfg) userName userEmail;
-        lfs = enabled;
+        #lfs = enabled;
         signing = {
           key = cfg.signingKey;
           signByDefault = mkIf gpg.enable true;
@@ -31,7 +31,10 @@ in
           init = { defaultBranch = "main"; };
           pull = { rebase = true; };
           push = { autoSetupRemote = true; };
-          core = { whitespace = "trailing-space,space-before-tab"; };
+          core = { 
+	    whitespace = "trailing-space,space-before-tab"; 
+	    editor = "nvim";
+	  };
         };
       };
     };

@@ -25,6 +25,7 @@ with lib.mynix;
       extraOptions = {
         passwordFile = "/persist/secrets/dougw-pw";
       };
+      signingKey = "6129D14861D5C62E";
     };
 
   };

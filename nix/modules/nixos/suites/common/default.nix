@@ -31,7 +31,7 @@ in
       };
 
       tools = {
-        git = enabled;
+        #git = enabled;
         misc = enabled;
         comma = enabled;
         bottom = enabled;
