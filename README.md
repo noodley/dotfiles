@@ -10,7 +10,11 @@ nixos-rebuild --flake '.#e490' build
 ```
 
 ### Config Layout
-* Based on snowfwall-lib: https://github.com/snowfallorg/lib
+* Config patterend after: https://github.com/jakehamilton/config
+* * Based on snowfwall-lib: https://github.com/snowfallorg/lib
 * Each host is defined nix/systems/<architecture>/<hostname>
-* 
+* nix/nixos/modules/archetypes/workstation - Workstation config
+* nix/nixos/modules/archetypes/server - Server config
+* nix/nixos/modules/suites/common - Config hsared across all hosts
+
 ### Todo

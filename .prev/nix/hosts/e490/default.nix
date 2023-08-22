@@ -30,6 +30,8 @@
   #  lidSwitchExternalPower = "lock";
   #};
 
+  services.fwupd.enable = true;
+
   xdg.portal = {
     enable = true;
     extraPortals=[
