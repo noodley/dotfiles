@@ -26,11 +26,12 @@ with lib.mynix;
         passwordFile = "/persist/secrets/dougw-pw";
       };
     };
+
   };
 
   # Use a larger console font for the smaller screen
   console.font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-128b.psf.gz";
-
+  
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
