@@ -20,16 +20,5 @@ in
       MANPAGER = "less";
       EDITOR = "nvim";
     };
-
-    mynix.home = {
-      extraOptions = {
-        # Use Neovim for Git diffs.
-        programs.zsh.shellAliases.vimdiff = "nvim -d";
-        programs.bash.shellAliases.vimdiff = "nvim -d";
-        programs.fish.shellAliases.vimdiff = "nvim -d";
-	programs.bash.shellAliases.vi = "nvim";
-	programs.bash.shellAliases.vim = "nvim";
-      };
-    };
   };
 }
