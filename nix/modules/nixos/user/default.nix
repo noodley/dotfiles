@@ -38,6 +38,8 @@ in
       # system to select).
       uid = 1000;
 
+      passwordFile = "/persist/secrets/${cfg.name}-pw";
+
       extraGroups = [ ] ++ cfg.extraGroups;
     } // cfg.extraOptions;
   };
