@@ -254,10 +254,10 @@ bar {
 default_border pixel 1
 default_floating_border pixel 1
 
-client.focused #8fbcbb #8fbcbb #eceff4 #eceff4
-client.focused_inactive #2E3440 #2E3440 #e5e9f0 #5e81ac
-client.unfocused #3b4252 #3b4252 #4c566a #5e81ac
-client.urgent #d08770 #d08770 #eceff4 #bf616a
+#client.focused #8fbcbb #8fbcbb #eceff4 #eceff4
+#client.focused_inactive #2E3440 #2E3440 #e5e9f0 #5e81ac
+#client.unfocused #3b4252 #3b4252 #4c566a #5e81ac
+#client.urgent #d08770 #d08770 #eceff4 #bf616a
 
 for_window [app_id="wofi"] border none
 # for_window [app_id="firefox"] border none
