@@ -28,7 +28,6 @@ in
       swappy = enabled;
       waybar = enabled;
       xdg-portal = enabled;
-      electron-support = enabled;
     };
 
     mynix.home.configFile."sway/config".text =
