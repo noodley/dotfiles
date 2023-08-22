@@ -16,6 +16,7 @@ in
     extraGroups = mkOpt (listOf str) [ "wheel" ] "Groups for the user to be assigned.";
     extraOptions = mkOpt attrs { }
       (mdDoc "Extra options passed to `users.users.<name>`.");
+    uid = mkOpt int 1000 "User ID.";
   };
 
   config = {
@@ -36,9 +37,8 @@ in
       # However, if you add multiple users you'll need to change this
       # so each user has their own unique uid (or leave it out for the
       # system to select).
-      uid = 1000;
+      uid = cfg.uid;
 
-      passwordFile = "/persist/secrets/${cfg.name}-pw";
 
       extraGroups = [ ] ++ cfg.extraGroups;
     } // cfg.extraOptions;

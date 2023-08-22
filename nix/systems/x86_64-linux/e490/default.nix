@@ -16,6 +16,16 @@ with lib.mynix;
       ephemeral-root-btrfs = enabled;
       encrypted-root = enabled;
     };
+
+    user = {
+      name = "dougw";
+      email = "dweimer@gmail.com";
+      uid = 1000;
+      extraGroups = [ "wheel" ];
+      extraOptions = {
+        passwordFile = "/persist/secrets/dougw-pw";
+      };
+    };
   };
 
   # Use a larger console font for the smaller screen
