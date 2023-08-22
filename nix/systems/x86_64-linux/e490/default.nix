@@ -14,6 +14,7 @@ with lib.mynix;
 
     system.fs = { 
       ephemeral-root-btrfs = enabled;
+      encrypted-root = enabled;
     };
   };
 
