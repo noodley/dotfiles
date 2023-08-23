@@ -14,7 +14,6 @@ in
 
     environment.systemPackages = with pkgs; [
       file
-      fzf
       killall
       jq
       pciutils
