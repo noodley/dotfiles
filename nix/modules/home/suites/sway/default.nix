@@ -16,6 +16,7 @@ in
       desktop = {
         addons.swayidle = enabled;
         addons.swaylock = enabled;
+        addons.foot = enabled;
       };
     };
   };

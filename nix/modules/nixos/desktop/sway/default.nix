@@ -21,7 +21,6 @@ in
     # Desktop additions
     mynix.desktop.addons = {
       gtk = enabled;
-      foot = enabled;
       mako = enabled;
       rofi = enabled;
       wofi = enabled;
