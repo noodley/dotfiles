@@ -15,6 +15,7 @@ in
       apps.cli = {
 	neovim = enabled;
 	fzf = enabled;
+	ripgrep = enabled;
       };
     };
   };
