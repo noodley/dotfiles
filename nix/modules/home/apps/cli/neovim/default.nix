@@ -17,6 +17,12 @@ in
       viAlias = true;
       vimAlias = true;
       vimdiffAlias = true;
+      plugins = with pkgs.vimPlugins; [
+        fzf-lua
+      ];
+      extraConfig = ''
+        nnoremap <c-P> <cmd>lua require('fzf-lua').files()<CR>
+      '';
     };
   };
 }
