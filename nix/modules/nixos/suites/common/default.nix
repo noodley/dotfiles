@@ -17,7 +17,6 @@ in
       nix = enabled;
 
       apps.cli = {
-        tmux = enabled;
 	neovim = enabled;
 	yubikey = enabled;
       };
@@ -31,7 +30,6 @@ in
       };
 
       tools = {
-        #git = enabled;
         misc = enabled;
         comma = enabled;
         bottom = enabled;

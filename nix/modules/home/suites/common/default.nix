@@ -13,6 +13,7 @@ in
   config = mkIf cfg.enable {
     mynix = {
       apps.cli = {
+	tmux = enabled;
 	neovim = enabled;
 	fzf = enabled;
 	ripgrep = enabled;
