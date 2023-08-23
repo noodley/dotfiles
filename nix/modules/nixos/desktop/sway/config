@@ -28,7 +28,7 @@ set $right l
 set $term env @term@
 
 # Swaylock
-set $swaylock swaylock-fancy -f "Hack-Nerd-Font-Propo-Regular"
+set $swaylock swaylock
 
 # Menu
 set $menu-run wofi --show drun --prompt search

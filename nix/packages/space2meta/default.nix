@@ -27,7 +27,7 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.com/interception/linux/plugins/space2meta";
     description = "Hold space for meta, tap space for space.";
     license = licenses.mit;
-    maintainers = with maintainers; [ dougw ];
+    maintainers = with maintainers; [ noodley ];
     platforms = platforms.linux;
     mainProgram = "space2meta";
   };

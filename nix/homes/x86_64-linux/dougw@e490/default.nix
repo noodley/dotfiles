@@ -6,6 +6,12 @@ with lib.mynix;
     inputs.impermanence.nixosModules.home-manager.impermanence
   ];
 
+  mynix = {
+    suites = {
+      sway = enabled;
+    };
+  };
+
   programs = {
     bash = {
       enable = true;
@@ -42,6 +48,10 @@ with lib.mynix;
           editor = "nvim";
         };
       };
+    };
+
+    home-manager = {
+      enable = true;
     };
   };
 

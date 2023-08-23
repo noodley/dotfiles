@@ -54,11 +54,8 @@ in
       enable = true;
       extraPackages = with pkgs; [
         rofi
-        swaylock
-        swayidle
         xwayland
         sway-contrib.grimshot
-        swaylock-fancy
         wl-clipboard
         wf-recorder
         libinput
