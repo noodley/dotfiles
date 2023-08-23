@@ -8,6 +8,7 @@ with lib.mynix;
 
   mynix = {
     suites = {
+      common = enabled;
       sway = enabled;
     };
   };
@@ -15,11 +16,7 @@ with lib.mynix;
   programs = {
     bash = {
       enable = true;
-      shellAliases = {
-        vimdiff = "nvim -d";
-        vi = "nvim";
-        vim = "nvim";
-      };
+      shellAliases = { };
       shellOptions = [ ];
       bashrcExtra = ''
         set -o vi

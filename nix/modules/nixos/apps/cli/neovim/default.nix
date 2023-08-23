@@ -7,7 +7,7 @@ let
 in
 {
   options.mynix.apps.cli.neovim = with types; {
-    enable = mkBoolOpt false "Whether or not to enable neovim.";
+    enable = mkBoolOpt false "Enable neovim system wide.";
   };
 
   config = mkIf cfg.enable {
