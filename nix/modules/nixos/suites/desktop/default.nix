@@ -8,20 +8,33 @@ in
 {
   options.mynix.suites.desktop = with types; {
     enable =
-      mkBoolOpt false "Whether or not to enable common desktop configuration.";
+      mkBoolOpt false "Enable wayland and host level desktop settings.";
   };
 
   config = mkIf cfg.enable {
     mynix = {
-      desktop = {
-        sway = enabled;
-      };
+      desktop = { };
 
-      # TODO: Add firefox and logseq modules
       apps = {
         firefox = enabled;
         logseq = enabled;
       };
+    };
+
+    xdg.portal = {
+      enable = true;
+      extraPortals=[
+      	pkgs.xdg-desktop-portal-wlr
+      	pkgs.xdg-desktop-portal-gtk
+      ];
+    };
+
+    # This is needed because the home manager version of swaylock
+    # does not create the pam file.
+    security.pam.services.swaylock = {};
+
+    programs = {
+      dconf.enable = true;
     };
   };
 }

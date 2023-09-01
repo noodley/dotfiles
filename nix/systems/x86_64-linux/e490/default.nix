@@ -21,7 +21,7 @@ with lib.mynix;
       name = "dougw";
       email = "dweimer@gmail.com";
       uid = 1000;
-      extraGroups = [ "wheel" ];
+      extraGroups = [ "wheel" "input" ];
       extraOptions = {
         passwordFile = "/persist/secrets/dougw-pw";
       };
@@ -32,6 +32,7 @@ with lib.mynix;
 
   # Use a larger console font for the smaller screen
   console.font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-128b.psf.gz";
+
   
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

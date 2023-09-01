@@ -9,6 +9,9 @@ with lib.mynix;
   mynix = {
     suites = {
       common = enabled;
+    };
+
+    desktop = {
       sway = enabled;
     };
   };

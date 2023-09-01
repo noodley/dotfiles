@@ -15,27 +15,7 @@ in
         common = enabled;
         development = enabled;
         desktop = enabled;
-        #art = enabled;
-        #video = enabled;
-        #social = enabled;
-        #media = enabled;
       };
-
-      #tools = {
-      #  appimage-run = enabled;
-      #};
-    };
-
-    programs = {
-      dconf.enable = true;
-    };
-
-    xdg.portal = {
-      enable = true;
-      extraPortals=[
-      	pkgs.xdg-desktop-portal-wlr
-      	pkgs.xdg-desktop-portal-gtk
-      ];
     };
   };
 }
